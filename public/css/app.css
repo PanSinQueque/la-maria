@@ -335,3 +335,47 @@ button {
         animation-duration: 0.01ms !important;
     }
 }
+/* ==================================================
+   10. ÁREA DE CIERRE DE SESIÓN DEL MENÚ LATERAL
+   ================================================== */
+.sidebar-logout {
+    margin-top: auto;
+    padding: 16px;
+    border-top: 1px solid #E7E3ED;
+}
+
+.sidebar-logout + .sidebar__footer {
+    margin-top: 0;
+}
+
+.sidebar-logout form {
+    margin: 0;
+}
+
+.btn-logout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #E7E3ED;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+    color: #6A5492;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-logout:hover {
+    background-color: #F0ECF6;
+    color: #6A5492;
+}
+
+.btn-logout:focus-visible {
+    outline: 2px solid #07AE8B;
+    outline-offset: 3px;
+}

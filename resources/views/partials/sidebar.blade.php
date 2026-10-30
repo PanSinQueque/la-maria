@@ -42,6 +42,16 @@ $items = [
         </a>
     </nav>
 
+    <div class="sidebar-logout">
+        <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="btn-logout">
+                <span aria-hidden="true">⇦</span>
+                <span>Cerrar sesión</span>
+            </button>
+        </form>
+    </div>
+
     <div class="sidebar__footer">
         <span class="sidebar__footer-dot" aria-hidden="true"></span>
         <span>Panel administrativo</span>
