@@ -637,3 +637,113 @@ button {
     margin: 6px 0 0;
     padding-left: 20px;
 }
+
+/* ==================================================
+   13. PAGINACIÓN - PASTELERÍA LA MARÍA
+   ================================================== */
+.pagination-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pagination-container nav {
+    width: 100%;
+    color: var(--color-text);
+    font-size: 14px;
+}
+
+.pagination-container nav p {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.pagination-container .fw-semibold {
+    font-weight: 600;
+}
+
+/* Bootstrap muestra una versión móvil y otra de escritorio. */
+.pagination-container .d-none {
+    display: none;
+}
+
+.pagination-container .d-sm-none {
+    display: flex;
+    justify-content: center;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-item {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.page-item .page-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    min-width: 38px;
+    min-height: 38px;
+    padding: 8px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    color: var(--color-primary);
+    background: var(--color-white);
+    font-size: 0.875rem;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.page-item .page-link:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background: var(--color-primary-light);
+}
+
+.page-item.active .page-link {
+    border-color: var(--color-primary);
+    color: var(--color-white);
+    background: var(--color-primary);
+    font-weight: 600;
+}
+
+.page-item.disabled .page-link {
+    border-color: var(--color-border);
+    color: #777777;
+    background: var(--color-background);
+    cursor: not-allowed;
+}
+
+@media (min-width: 576px) {
+    .pagination-container .d-sm-none {
+        display: none;
+    }
+
+    .pagination-container .d-sm-flex {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        width: 100%;
+    }
+}
