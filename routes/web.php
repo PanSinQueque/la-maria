@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\CategoriaController;
 use Illuminate\Support\Facades\Route;
 
 Route::redirect('/', '/dashboard');
@@ -33,7 +34,7 @@ Route::post('/logout', [AuthenticatedSessionController::class, 'destroy'])
 Route::middleware('auth')->group(function () {
     Route::view('/dashboard', 'dashboard')->name('dashboard');
     Route::view('/productos', 'productos')->name('productos.index');
-    Route::view('/categorias', 'categorias')->name('categorias.index');
+    Route::resource('categorias', CategoriaController::class)->except(['show']);
     Route::view('/usuarios', 'usuarios')->name('usuarios.index');
     Route::view('/roles', 'roles')->name('roles.index');
     Route::view('/contacto', 'contacto')->name('contacto.index');
