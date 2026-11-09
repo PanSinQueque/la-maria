@@ -379,3 +379,181 @@ button {
     outline: 2px solid #07AE8B;
     outline-offset: 3px;
 }
+
+/* ==================================================
+   11. ESTILOS DEL MÓDULO CATEGORÍAS
+   ================================================== */
+.page-card {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var(--color-white);
+    border-radius: 10px;
+}
+
+.form {
+    display: grid;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.form-label {
+    color: var(--color-text);
+    font-weight: 600;
+}
+
+.form-control {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 7px;
+    background: var(--color-white);
+    color: var(--color-text);
+    font: inherit;
+}
+
+.form-control:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+}
+
+.form-control--textarea {
+    resize: vertical;
+}
+
+.form-error {
+    color: #A52A2A;
+    font-size: 12px;
+}
+
+.form-actions,
+.table-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border: 1px solid transparent;
+    border-radius: 7px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn--primary {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn--secondary {
+    background: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.btn--danger {
+    background: #FBE9E7;
+    color: #A52A2A;
+}
+
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+}
+
+.table-responsive,
+.pagination-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    color: var(--color-text);
+}
+
+.table th,
+.table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--color-border);
+    text-align: left;
+    vertical-align: middle;
+}
+
+.table th {
+    background: var(--color-primary-light);
+    font-weight: 600;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.status-badge--active {
+    background: #E0F5EE;
+    color: #08795F;
+}
+
+.status-badge--inactive {
+    background: var(--color-primary-light);
+    color: #625D69;
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 12px 15px;
+    border-radius: 7px;
+    line-height: 1.5;
+}
+
+.alert--success {
+    background: #E0F5EE;
+    color: #08795F;
+}
+
+.alert--error {
+    background: #FBE9E7;
+    color: #A52A2A;
+}
+
+.table-actions form {
+    margin: 0;
+}
+
+.pagination-container {
+    margin-top: 20px;
+}
+
+.pagination-container svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+    .page-card {
+        padding: 16px;
+    }
+
+    .table th,
+    .table td {
+        padding: 9px;
+        font-size: 12px;
+    }
+}
